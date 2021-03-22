@@ -57,7 +57,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; {{ date('Y') }} Rahmat Hidatyatullah.</strong>
+    <strong>Copyright &copy; {{ date('Y') }} Alif ndaru kusuma.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       Template By <a href="http://adminlte.io">AdminLTE.io</a>

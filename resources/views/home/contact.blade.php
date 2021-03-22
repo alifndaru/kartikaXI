@@ -33,40 +33,47 @@
             <div class="col-12 col-lg-6">
                 <div class="contact--info mt-50 mb-50">
                     <h4>Tulis Pesan</h4>
-                    <form method="POST" action="">
+                    @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+                    <form action="{{ route('send.email') }}" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nama" id="text" placeholder="Nama">
-                                    @error('nama')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
+                                    <input type="text" class="form-control" name="name" id="text" placeholder="Nama">
+                                        @error('name')
+                                            <span class="text-danger"> {{ $message }} </span>
+                                        @enderror
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="form-group">
                                     <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                                     @error('email')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
+                                        <span class="text-danger"> {{ $message }} </span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="col-12 col-lg-12">
+                               <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Enter subject">
+                                    @error('subject')
+                                    <span class="text-danger"> {{ $message }} </span>
+                                    @enderror
+                               </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="isi" id="message" cols="30" rows="5" placeholder="Pesan"></textarea>
+                                    <textarea class="form-control" name="content" id="message" cols="30" rows="5" placeholder="Pesan"></textarea>
                                     <small id="emailHelp" class="form-text text-muted">Maksimal kirim 5 kali dengan email yang sama</small>
-                                    @error('isi')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
+                                    @error('content')
+                                    <span class="text-danger"> {{ $message }} </span>
                                     @enderror
                                 </div>
                             </div>
-                            @csrf
                             <div class="col-12">
                                 <button class="btn clever-btn w-100" type="submit">Kirim</button>
                             </div>

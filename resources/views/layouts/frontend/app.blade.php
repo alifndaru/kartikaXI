@@ -11,6 +11,9 @@
     <!-- Title -->
     <title>Laraschool | {{ $title ?? '' }}</title>
 
+    <!-- style sendiri -->
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('templates/frontend/clever') }}/img/core-img/favicon.ico">
 

@@ -3,14 +3,13 @@
 ])
 @section('content')
 <!-- ##### Hero Area Start ##### -->
-<section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({{ asset('img/bg') }}/bg1.jpg);">
+<section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({{ asset('img/bg') }}/bg2.jpg);">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <!-- Hero Content -->
                 <div class="hero-content text-center">
-                    <h2>Selamat Datang di Laraschool</h2>
-                    <a href="#" class="btn clever-btn">Sekolah Elit</a>
+                    <h2>Selamat Datang di SMK Kartika</h2>
                 </div>
             </div>
         </div>
@@ -21,7 +20,7 @@
 <div class="regular-page-area section-padding-100 mt-5 mb-4">
     <div class="col-lg-9 mx-auto">
         <div class="card">
-            <div class="card-header">Laraschool</div>
+            <div class="card-header">SMK Kartika</div>
             <div class="card-body">
                 <p class="lead">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -35,6 +34,69 @@
         </div>
     </div>
 </div>
+
+<section id="about" class="about">
+    <div class="container">
+      <div class="row no-gutters">
+          <div class="content d-flex flex-column justify-content-center">
+            <div class="text-center">
+                <h3>Visi & Misi SMK Kartika X-1</h3>
+                <p>
+                  SMK KARTIKA X.1 Berdiri sejak tahun 2002, telah banyak menghasilkan lulusan-lulusan yang berkualitas dan berhasil di berbagai bidang, 
+                </p>
+            </div>
+            <div class="row">
+              <div class="col-md-6 icon-box">
+                <i class="bx bx-bookmarks"></i>
+                <h4>Visi</h4>
+                <p>memiliki visi untuk mencerdaskan anak bangsa dan menghasilkan lulusan yang berhasil, bertakwa dan berguna bagi bangsa dan masa depan.</p>
+              </div>
+              <div class="col-md-6 icon-box">
+                <i class="bx bx-shield"></i>
+                <h4>Misi</h4>
+                <p>adalah agar setiap lulusan SMK KARTIKA X.1 tidak tertinggal dan sejajar serta bisa memanfaatkan ilmu yang sudah dipelajari disekolah, menjadikan siswa menjadi siswa yang berkompetensi dan memiliki daya saing untuk menghadapi dunia kerja.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="why-us" class="why-us">
+    <div class="container">
+      <div class="section-title">
+        <div class="col-12">
+            <div class="section-heading">
+                <h3>JURUSAN</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="box">
+                    <span>TKJ</span>
+                    <h4>Teknik Komputer Jaringan</h4>
+                    <p>Jurusan yang memperlajari di bidang software dan hardware</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box">
+                    <span>OTKP</span>
+                    <h4>perkantoran</h4>
+                    <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box">
+                    <span>AK</span>
+                    <h4>Akutansi</h4>
+                    <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
 
 @if($pengumuman->count() > 0)
 <section class="upcoming-events section-padding-100-0">
@@ -63,8 +125,7 @@
                 </div>
             </div>
             @endforeach
-        </div>
-        <div class="row">
+
             <a href="{{ route('pengumuman') }}" class="alert alert-success alert-link mx-auto">Lihat Semua Pengumuman</a>
         </div>
     </div>
@@ -94,7 +155,7 @@
                             <span class="badge badge-danger float-right">Author : {{ $art->user->name }}</span>
                         </div>
                         <div class="card-body">
-                            <img src="{{ asset($art->getThumbnail()) }}" width="100%" style="height: 300px; object-fit: cover; object-position: center;">
+                            <img src="{{ asset($art->getThumbnail()) }}" width="100%" style="height: 270px; object-fit: cover; object-position: center;">
 
                             <div class="card-text mt-3">
                                 {!! Str::limit($art->deskripsi) !!}

@@ -4,7 +4,7 @@
         <nav class="classy-navbar justify-content-between" id="cleverNav">
 
             <!-- Logo -->
-            <a class="nav-brand" href="/"><img src="{{ asset('img/icons') }}/laravel.jpg" width="50" alt=""> LARASCHOOL</a>
+            <a class="nav-brand" href="/"><img src="{{ asset('img/icons') }}/logo.png" width="50" alt="">SMK Kartika X-1</a>
 
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">

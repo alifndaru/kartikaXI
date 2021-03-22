@@ -14,6 +14,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,9 @@ use App\Http\Controllers\PengumumanController;
 Route::get('/',[HomeController::class,'index']);
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
-Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+// Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::get('/contact', [EmailController::class,'create'])->name('contact');
+Route::post('/contact', [EmailController::class,'sendEmail'])->name('send.email');
 
 //Artikel
 Route::get('/artikel',[ArtikelController::class,'index'])->name('artikel');
